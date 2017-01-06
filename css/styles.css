@@ -1,0 +1,42 @@
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#main {
+    text-align: justify;
+    text-align-last: center;
+}
+
+#python {
+    display: none;
+    text-align: center;
+}
+
+#python li {
+    text-align: justify;
+}
+
+#PUNchline {
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: pink;
+}
+
+img {
+    margin-left: 30px;
+    width:  500px;
+    border: solid black 1px;
+}
+.no-access {
+    opacity: .5;
+    cursor: not-allowed;
+}

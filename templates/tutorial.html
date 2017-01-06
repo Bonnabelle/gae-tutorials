@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GAE Hosting Tutorials</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="main">
+            <img src="https://media.makeameme.org/created/errors-errors-everywhere-1v5ob0.jpg"></img>
+            <h3>Are you tired of getting error after error when trying to host your GAE app on appspot? Isn't it frustrating
+                when someone says "just hit the deploy button" for the hundredth time? How about when you look over Stack
+                Overflow for an answer but are still confused? And don't forget how helpful the documentation can be sometimes!</h3>
+            <h4>I'm here to clear the air and provide a simple tutorial on how to host your successfuly deploy your GAE apps. Firstly, choose your
+                language below. (Java coming soon)</h4>
+            <button onclick="hide(false)">Python</button><button class="no-access">Java</button>
+            <br>
+            <br>
+        </div>
+        <div id="python">
+            <button onclick="hide(true)">Hide Python</button>
+            <br>
+            <ol>
+                <li>First off, go to <a href="https://cloud.google.com/" target="_blank">Google Cloud</a> and sign in to your google account.
+                This will be the developer account for your project, so choose wisely!</li>
+                <br>
+                <li>Second, hit the button at the top right-hand corner that says "Console".</li>
+                <br>
+                <li>Now hit the little tab  that says "Project" right next to the big
+                    "Google Cloud Platform" text on the top left corner of the screen.</li>
+                <br>
+                <li>Hit "Create Project." For this example I named mine memed-tutorial.</li>
+                <br>
+                <img src="https://i.imgsafe.org/ee814998dc.png"></img>
+                <br>
+                <br>
+                <b>IMPORTANT: Make sure you give your project THE SAME NAME as your GAE application.
+                   The app id will be the url followed by .appspot.com when you're finished.</b>
+                <br>
+                <img src="https://i.imgsafe.org/eee5274d66.png"></img>
+                <br>
+                <br>
+                <li>Now you should be back on the homepage, and your current project is the one you jsut created. Look
+                    at the bottom right corner of the homepage and you should see something like this:</li>
+                <br>
+                <img src="https://i.imgsafe.org/eef5edead4.png"></img>
+                <br>
+                <br>
+                <li>Click on the arrow and you should see this:</li>
+                <br>
+                <img src="https://i.imgsafe.org/eefd40c314.png"></img>
+                <br>
+                <br>
+                <li>Copy the project ID. Now we need to install Google SDK tools for our console.</li>
+                <br>
+                <li> Go to <a href="https://cloud.google.com/sdk/" target="_blank">Google Cloud's SDK download page</a>
+                    and follow <a href="https://cloud.google.com/sdk/docs/quickstart-windows" target="_blank">this</a> tutorial.</li>
+                <br>
+                <b>IMPORTANT: MAKE SURE TO CHECK THE OPTION TO INSTALL BETA TOOLS AS WELL, YOU WILL NEED THESE!</b>
+                <br>
+                <br>
+                <li>Now that that's done, open up Google App Engine and your console!</li>
+                <br>
+                <li>Now cd into your project folder and when you get there, type $gcloud --project=[insert project name here] beta app create
+                    (no dollar sign, of course). The --project is a flag that specifies which project you are deploying. If this is your
+                    first time deploying an app, it won't really matter if you put it there, but if you've been deploying a few, this
+                    is an easy way to ensure your site is being deployed for a specific project.</li>
+                <br>
+                <img src="https://i.imgsafe.org/ef18ec5a4b.png"></img>
+                <br>
+                <br>
+                <li>You should get a lovely little stacktrace and then you're presented with a choice:</li>
+                <br>
+                <img src="https://i.imgsafe.org/ef2066eb39.png"></img>
+                <br>
+                <br>
+                <li>Choose your timezone. You should then get another stacktrace.</li>
+                <br>
+                <li>If your code "exited with code 0", congratulations! It worked! If not, retrace your steps and maybe try again.
+                    (Or <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=HELP+MY+CODE+IS+BROKEN" target="_blank">google it</a>. like I had to.)</li>
+                <br>
+                <li>Now comes the easy part! Click your project in Google App Engine, and <i>finally</i> hit that Deploy button! It may prompt you to sign
+                    in to access developer tools and that's okay; just sign in with the same account you used earlier for Google Cloud Platform. Afterwards, you
+                    should get a stacktrace of Google doing its magic.</li>
+                <br>
+                <img src="https://i.imgsafe.org/ef3a93bbbd.png"></img>
+                <br>
+                <br>
+                <li>If it exited with code 0...</li>
+                <br>
+                <img src="https://i.imgsafe.org/ef4586c1f9.png"></img>
+                <br>
+                <li><h5>Your website is up and running at [project-id].appspot.com!!</h5></li>
+                <br>
+                <img src="https://i.imgsafe.org/ef48fb2402.png"></img>
+                <h6>I guess you could say... we are number one.</h6>
+                <img id="PUNchline" src="http://leninja.com.br/wp-content/uploads/2016/10/ihihihihhi.png"></img>
+                <br>
+            </ol>
+            <p><b>Remember, when you need to update your site, just hit deploy again.</b>
+                Thanks for reading, hope this helps! If you get stuck anywhere just contact me on Slack. (Unless you're a total stranger. In that case,
+                please  <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=HELP+MY+CODE+IS+BROKEN" target="_blank">google it</a>.)</p>
+
+        </div>
+
+        <!--<button onclick="hide(false)">Java</button>-->
+        <!--<div id="java">
+            <button onclick="hide(true)">Hide Java</button>
+            <h4>Tutorial coming soon!</h4>
+        </div>-->
+
+
+        <script>
+            function hide(bool) {
+                var p = document.getElementById("python")
+                //var j = document.getElementById("java")
+                if(bool == false)
+                    p.style.display="block";
+                    //j.style.display="block"
+                else
+                    p.style.display="none";
+                    //j.style.display="none";
+            }
+        </script>
+        <br>
+        <br>
+        <a href="/">
+            <button>Back to quality content</button>
+        </a>
+    </body>
+</html>
