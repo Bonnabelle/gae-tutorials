@@ -61,7 +61,7 @@
                 <br>
                 <li>Now that that's done, open up Google App Engine and your console!</li>
                 <br>
-                <li>Now cd into your project folder and when you get there, type $gcloud --project=[insert project name here] beta app create
+                <li>Now <b>cd into your project folder</b>(You might be in the Google SDK by default) and when you get to the project folder, type $gcloud --project=[insert project id here] beta app create
                     (no dollar sign, of course). The --project is a flag that specifies which project you are deploying. If this is your
                     first time deploying an app, it won't really matter if you put it there, but if you've been deploying a few, this
                     is an easy way to ensure your site is being deployed for a specific project.</li>
@@ -79,6 +79,7 @@
                 <li>If your code "exited with code 0", congratulations! It worked! If not, retrace your steps and maybe try again.
                     (Or <a href="https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=HELP+MY+CODE+IS+BROKEN" target="_blank">google it</a>. like I had to.)</li>
                 <br>
+                <li>If it tells you to run $gcloud app deploy go ahead and do so.</li>
                 <li>Now comes the easy part! Click your project in Google App Engine, and <i>finally</i> hit that Deploy button! It may prompt you to sign
                     in to access developer tools and that's okay; just sign in with the same account you used earlier for Google Cloud Platform. Afterwards, you
                     should get a stacktrace of Google doing its magic.</li>
