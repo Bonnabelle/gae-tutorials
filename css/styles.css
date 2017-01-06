@@ -1,4 +1,10 @@
+@font-face {
+    font-family: cooper-hewitt.light;
+    src: url('copper-hewitt.light.otf');
+}
+
 body {
+    font-family: cooper-hewitt.light;
     margin-left: 50px;
     margin-right: 50px;
 }
